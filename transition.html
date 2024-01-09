@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+
+<style>
+    img{
+        transition: transform 2s;
+    }
+</style>
+<body>
+    <div class="box" style="height: 600px; border: 5px solid black;">
+    <img id="b1" onmouseover="transitionIn1()" onmouseout="transitionOut1()" class="b1" src="1.avif" alt="img1" style="height: 300px; width: 300px;">
+    <img id="b2" onmouseover="transitionIn2()" onmouseout="transitionOut2()" class="b2" src="2.jpeg" alt="img2" style="height: 300px; width: 300px;">
+</div>
+</body>
+<script>
+    function transitionIn1(){
+        document.getElementById("b1").style.transform="scale(2)";
+        document.getElementById("b2").style.transform="scale(0)";
+    }
+
+    function transitionOut1(){
+        document.getElementById("b1").style.transform="scale(1)";
+        document.getElementById("b2").style.transform="scale(1)";
+    }
+
+    function transitionIn2(){
+        document.getElementById("b2").style.transform="scale(2)";
+        document.getElementById("b1").style.transform="scale(0)";
+    }
+
+    function transitionOut2(){
+        document.getElementById("b2").style.transform="scale(1)";
+        document.getElementById("b1").style.transform="scale(1)";
+    }
+</script>
+
+</html>
